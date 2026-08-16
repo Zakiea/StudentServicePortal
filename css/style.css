@@ -1,0 +1,126 @@
+body{
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #EEE;
+}
+
+.container{
+        
+    background-color:#cf632d;
+    display: flex;
+    justify-items: center;
+    padding: 20px 0 20px 0 ;
+   
+}
+div .icon{
+    display: inline;
+    color: transparent;
+    -webkit-text-stroke: 1px black; 
+   
+}
+div .icon i{
+    font-size: 20px;
+    padding: 15px;
+}
+div .icon a{ 
+    text-decoration: none;
+    color: #cf632d;
+    padding:38px 10px 35px 10px ;
+}
+div .menu ul li{
+    display: inline;
+    list-style: none;
+   
+}
+.menu a{
+    text-decoration: none;
+    color: #000;
+    padding:36px 10px 37px 10px ;
+    
+}
+.menu{
+    margin-left: -40px;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+div .icon a:hover{
+    background-color: #ffe4c4;
+    color: #ffe4c4;
+}
+div .menu ul li a:hover{
+    background-color:#ffe4c4;
+    
+}
+.menu a:active{
+    background-color:#ffe4c4 ;
+}
+.search{
+margin-left: auto;
+margin-right: 5px;
+
+}
+
+.container .search input[type=text]{
+    
+    padding: 10px;
+    border: none;
+    margin-top: 6px;
+    border: 1px solid #cf632d;
+    border-radius: 5px;
+    background-color: #f0986c;
+}
+
+@media screen and (max-width: 600px){
+    .icon a:not(:first-child) {display: none;}
+    .icon i{
+        display: none;
+    }
+    .menu ul li a{
+        display: block;
+        font-size: small;
+        text-align: center;
+    }
+}
+.banner_img #banner_id{
+    width: 100%;
+    height: fit-content;
+}
+
+/*enrollment page styles */
+.enrolled_subj{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+}
+.enrol_table,tr,td,th{
+    border-bottom: 1px solid #555;
+   
+    border-collapse: collapse;
+}
+.enrol_table td,tr,th{
+    padding:15px
+}
+.enrol_table tr:hover{
+    background-color: #ffe4c4;
+}
+
+/* help and support styles  */
+.help_support_form{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.help_support_form input,label{
+    padding: 5px;
+    margin-left: 10px;
+}
+.help_support_form #help_table tr,td,th{
+    border-bottom: none;
+    text-align: left;
+}
