@@ -87,6 +87,11 @@ margin-right: 5px;
 .banner_img #banner_id{
     width: 100%;
     height: fit-content;
+    display: inline;
+}
+.banner_img img{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /*enrollment page styles */
