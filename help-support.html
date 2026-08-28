@@ -1,75 +1,136 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <meta name="viewport" content="width: device-width, initial-scale:1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="js/javascript.js"></script>
     </head>
-
-
-    <body>
-        <header>
-            <div class="container">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-home outline" ></i></a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#">Courses</a>
-                            <a href="#">Students</a>
-                            <a href="#">Industry</a>
-                            <a href="#">Study Online</a>
-                            <a href="#">About Us</a>
-                            <a href="#">News and Events</a></li>           
-                    </ul>   
-                </div>
-                <div class="search">
-                        <input type="text" placeholder="search...">
-                    </div>
+<body>
+    <header>
+        <div class="container">
+            <div class="icon">
+                <a href="#"><i class="fa fa-home outline" ></i></a>
             </div>
-        </header>
-
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Courses</a>
+                        <a href="#">Students</a>
+                        <a href="#">Industry</a>
+                        <a href="#">Study Online</a>
+                        <a href="#">About Us</a>
+                        <a href="#">News and Events</a></li>           
+                </ul>   
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="search...">
+                </div>
+        </div>
+    </header>
         <!--Help $ support form-->
        
-       <div class="help_support_form"> 
-            <form action="">
-                <table id="help_table">
-                    <tr>
-                        <th><label for="username">Name</label></th>
-                        <td><input type="text" name="username"><br></td>
-                    </tr>
-                    <tr>
-                        <th><label for="student_id">Student ID</label></th>
-                        <td><input type="text" pattern="" name="student_id"><br></td>
-                    </tr>
-                    <tr>
-                        <th><label for="campus">Current Campus</label></th>
-                        <td> 
-                            <select name="campus-list" id="">
-                                <option value="Dandenong">Dandenong</option>
-                                <option value="frankston">Frankston</option>
-                                <option value="berwick">Berwick</option>
-                                <option value="cranbourn">Cranbourn</option>
-                            </select>
-                        </td>
-                    </tr>
+       <div class="form-container" onsubmit="return validate_form()" id="form" name="forms">
+        <div class="row">
+             <h2>Share With Us</h2></div>
+        
+        <form action="" id="forms">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your firstname..." onmouseover="showtext()" onmouseout="hidetext()">
+                    <p id="fname_span"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="lastname" id="lname" placeholder="Your Last Name..." onmouseover="lshow()" onmouseout="lhide()">
+                    <p id="lname_span"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="lastname" id="email" placeholder="Your Student Email" onmouseover="eshow()" onmouseout="ehide()">
+                    <p id="email_span"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="student_id">Student ID</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="student_id" id="student_id" placeholder="Your Student ID...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="gender" id="female_radio" value="Female">
+                    <label for="female_radio">Female</label>
+                    <input type="radio" name="gender" id="male_radio" value="Male">
+                    <label for="male_radio">Male</label>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="campus">Campus</label>
+                </div>
+                <div class="col-75">
+                    <select name="campus" id="campus">
+                        <option value="dandenong">Dandenong</option>
+                        <option value="frankston">Frankstone</option>
+                        <option value="berwick">Berwick</option>
+                        <option value="cranbourn">Cranbourn</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">How Can We Help</label>
+                </div>
+                <div class="col-75">
+                    <textarea name="subject" id="form_subject" placeholder="Ask Us / How Can We Help.."></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="button" name="submit" id="submit_btn" value="Submit" onclick="validate_form()">
+            </div>
+        </form>
+       </div>
+<body>
+<!--Footer-->
+<footer class="footer">
+    <div class="flex-container">
+       <div class="footer_img">
+            <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
+            <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
+        </div> 
+        <div class="social-media">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+    </div>
+        
+    <div id="footer_text">
+        <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
+             We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
+             We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
+            </div>
+        
 
-                    <tr>
-                        <th><label for="ask_us">How Can We Help</label></th>
-                        <td><textarea name="ask_us" id=""></textarea></td>
-                    </tr>
-                
-                
-                
-                
-                </table>
-                
-                
-            </form>
-        </div>
-       
-
-    </body>
-
+</footer>
 </html>

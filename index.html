@@ -4,45 +4,119 @@
 
 <meta name="viewport" content="width: device-width, initial-scale:1.0">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 <header>
+    
     <div class="container">
+        <input class="menu-chkbx" type="checkbox" id="menu-chkbx"/>
+	<label class="menu-burger" for="menu-chkbx">
+		<span class="hamburger"></span>
+	</label>
         <div class="icon">
             <a href="#"><i class="fa fa-home outline" ></i></a>
         </div>
         <div class="menu">
             <ul>
-                <li>
+                <li id="courses">
                     <a href="#">Courses</a>
-                    <a href="#">Students</a>
-                    <a href="#">Industry</a>
-                    <a href="#">Study Online</a>
-                    <a href="#">About Us</a>
-                    <a href="#">News and Events</a></li>  
-                    
-            </ul>
-            
+                    <!--<div class="dropdown_menu">
+                        <ul class="dropwown_content">
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Art, Design and Photography</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Building Trades</a></li>
+                            <li><a href="#">Buisness and Finance</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Art, Design and Photography</a></li>
+                        </ul>
+                        <ul class="dropdown_content">
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Building Trades</a></li>
+                            <li><a href="#">Buisness and Finance</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                            <li><a href="#">Alied Health and Nursing</a></li>
+                        </ul>
+                    </div> <---->
+                </li> 
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Industry</a></li>
+                <li><a href="#">Study Online</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">News and Events</a></li>
+                      
+            </ul> 
         </div>
         <div class="search">
                 <input type="text" placeholder="search...">
             </div>
     </div>
 </header>
-
+<!--Banner-->
 <section class="banner">
     <div class="banner_img">
-        <img id="banner_id" src="images/banner_image.jpg" alt="banner_image"> <!--download from chisholm's Official Website-->
-            
-            <img src="images/chisholm-online-logo-white.png" alt="chisholm-online-logo-white"><!--Download from Chisholm's Website-->
-            <h1>MYCHISHOLM</h1>
-        
+        <img id="banner_id" src="images/banner_image.jpg" alt="banner_image"> <!--download from chisholm's Official Website-->   
+            <div class="banner_content">
+                <img class="banner_logo" src="images/logo-chisholm-white.png" alt="chisholm-online-logo-white"><!--Download from Chisholm's Website-->
+                <h1>HIGHER EDUCATION COLLAGE</h1>  
+             </div>     
     </div>
 </section>
+<!--Body Content-->
+<section class="content medium-4 columns" >
+    <aside class="tow-columns layout-container" role="complementary" >    
+        <a href="student_details.html">
+                <div class="content-items"><span>Student Details</span>
+                    <p class="content-meta">Find Out more about your details here</p>
+                </div>
+            </a>
+            <a href="enrolement.html">
+                <div class="content-items"><span>Enrolments</span>
+                    <p class="content-meta">Your Enrolement Status including current, previous Enrolements</p>
+                </div>
+            </a>    
+            <a href="marks_results.html">
+                <div class="content-items"><span>Marks and Result</span>
+                    <p class="content-meta">Find Out when and how to access your results, and understand your grades</p>
+                </div>
+            </a>    
+            <a href="help-support.html">
+                <div class="content-items"><span>Help and Support</span>
+                    <p class="content-meta">How Can We Help you</p>
+                </div>
+            </a>    
+    </aside>
 
+</section>
 
+<!--Footer-->
+<footer class="footer">
+    <div class="flex-container">
+       <div class="footer_img">
+            <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
+            <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
+        </div> 
+        <div class="social-media">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+    </div>
+        
+    <div id="footer_text">
+        <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
+             We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
+             We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
+            </div>
+        
 
+</footer>
 </body>
-
 </html>

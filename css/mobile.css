@@ -1,0 +1,94 @@
+/* nabigation menu on screen */
+@media screen and (max-width: 600px){
+    .icon a:not(:first-child) {display: none;}
+    .icon i{
+        display: none;
+    }
+    .menu ul li a{
+        display: inline-block;
+        font-size: small;
+        text-align: center;   
+        display: none;
+    }
+    .menu-chkbx{
+    display: none;
+}
+.menu-burger{
+    grid-area: hamburger;
+    padding: 30px 20px 30px 0px;
+    position: relative;
+    visibility: visible;
+}
+.hamburger{
+    display: block;
+    height: 3px;
+    width: 20px;
+    position: relative;
+    background: rgb(0, 0, 0);
+}
+.hamburger::before{
+    top: 5px;
+}
+.hamburger::after{
+    top: 5px;
+}
+.hamburger::after, .hamburger::before{
+    background: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute
+}
+.menu-chkbx:checked + .menu-burger .hamburger{
+    background: transparent;
+}
+.menu-chkbx:checked + .menu-burger .hamburger::before{
+    transform: rotate(-45deg);
+}
+.menu-chkbx:checked + .menu-burger .hamburger::after{
+    transform: rotate(45deg);
+}
+.menu-chkbx:checked + .menu-burger .hamburger::before , .menu-chkbx:checked + .menu-burger .humberger::after{top: 0;}
+
+.menu-chkbx:checked ~ .menu{
+    max-height: 250px;
+    position: absolute;
+    margin-top: 62px;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #999;
+}
+    
+}
+
+/* Help and Support mobile view style*/
+/*Responsive Layout, when the screenis less than 600px wide,
+ display the two columns stack on the top of each other*/
+@media screen and (max-width: 600px){
+    .form-container{
+        width: 100%;
+        margin:0;
+        margin-top: 40px;
+    }
+    label{
+        margin-left: 0;
+    }
+    h2{
+        text-align: center;
+    }
+    .col-25, .c0l-75, input[type=text]{
+        width: 100%;
+        margin-top: 0;
+    }
+    #submit_btn{
+        width: 20%;
+        margin-right: 25%;
+    }
+}
+@media screen and (max-width: 350px){
+    #submit_btn{
+        width: 40%;
+        margin-right: 25%;
+    }
+}
