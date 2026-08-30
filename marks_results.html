@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width: device-width, initial-scale:1.0">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <title>Marks and Results</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <link rel="stylesheet" href="css/tablet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <header>
     <div class="container">
         <div class="icon">
-            <a href="#"><i class="fa fa-home outline" ></i></a>
+            <a href="./index.html"><i class="fa fa-home outline" ></i></a>
         </div>
         <div class="menu">
             <ul>
-                <li>
-                    <a href="#">Courses</a>
-                    <a href="#">Students</a>
-                    <a href="#">Industry</a>
-                    <a href="#">Study Online</a>
-                    <a href="#">About Us</a>
-                    <a href="#">News and Events</a></li>         
+                <li id="courses">
+                            <a href="enrolement.html">Enrolments</a>
+                        </li> 
+                        <li><a href="student_details.html">Student Detalis</a></li>
+                        <li><a href="marks_results.html">Results</a></li>
+                        <li><a href="help-support.html">Help and Support</a></li>
+                           
             </ul>   
         </div>
         <div class="search">
@@ -28,6 +31,7 @@
     </div>
 </header>
 
+<div class="units_container">
     <h3 id="current_units">Current Subject marks and Results</h3>
     <!--Table containing which subjects the student has been enroled -->
     <div class="current_subj">
@@ -78,17 +82,20 @@
                 <th>Subject Code</th>
                 <th>Subject Name</th>
                 <th>Credit</th>
+                <th>Core Elective</th>
                 <th>Status</th>
             </tr>
             <tr>
                 <td>ITS201</td>
                 <td>Inside Information Technology</td>
                 <td>12</td>
+                <td>Core</td>
                 <td>100%</td>
             </tr>
             <tr>
                 <td>ITS202</td>
                 <td>Math Foundations</td>
+                <td>Core</td>
                 <td>9</td>
                 <td>100%</td>
             </tr>
@@ -96,18 +103,23 @@
                 <td>ITS203</td>
                 <td>System and Network Administration</td>
                 <td>12</td>
+                <td>Selective</td>
                 <td>100%</td>
             </tr>
             <tr>
                 <td>ITS2014</td>
                 <td>Full Stack Web Development</td>
+                <td>Core</td>
                 <td>12</td>
+
                 <td>100%</td>
             </tr>
             
         </table>
     </div>
+</div>
 
+<!--footer-->
     <footer class="footer">
     <div class="flex-container">
        <div class="footer_img">

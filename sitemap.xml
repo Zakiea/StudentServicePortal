@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://localhost/student_details</loc>
+		<lastmod>2026-08-30-T08:00:44+10:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/marks_results</loc>
+		<lastmod>2026-08-30-T08:00:44+10:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/help-support</loc>
+		<lastmod>2026-08-30-T08:00:44+10:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/enrolement</loc>
+		<lastmod>2026-08-30-T08:00:44+10:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost</loc>
+		<lastmod>2026-08-30-T08:00:44+10:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+</urlset>

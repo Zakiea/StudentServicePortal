@@ -13,11 +13,9 @@ body{
     width: 100%;
     z-index: 1;
     background-color:#13054f;
-    
     display: flex;
     justify-items: center;
     padding: 20px 0 20px 0 ;
-    
    
 }
 div .icon{
@@ -80,7 +78,7 @@ margin-right: 5px;
     border-radius: 5px;
     background-color: #281481;
 }
-/*dropdown menu style *
+/*dropdown menu style */
 #courses{
     position: relative;
 }
@@ -127,6 +125,7 @@ margin-right: 5px;
 }
 .banner_img #banner_id{
     width: 100%;
+    max-width: 100%;
     height: fit-content;
     display: block;
 }
@@ -147,6 +146,40 @@ margin-right: 5px;
     font-weight: bold;
     letter-spacing: 2px;
     color: #FFF;
+}
+
+/* index.html Body Content Style */
+.content{
+    margin-top: 20px;
+}
+.tow-columns{
+    background-color: #EEE;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;  
+    padding: 30px;
+}
+.tow-columns .content-items{
+    background-color: #13054f;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    color: #FFF;
+    
+}
+.tow-columns div span{
+    text-decoration: underline;
+}
+.content-meta{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.content-items span:hover{
+    color: #cf632d;
+    font-weight: bolder;
 }
 /*-------------------------------------------------*/
 /*Marks and Result page styles */
@@ -248,41 +281,6 @@ textarea #form_subject{
 #submit_btn:hover{
     background-color:#f0986c;
     color: #000;
-}
-
-
-/* index.html Body Content Style */
-.content{
-    margin-top: 20px;
-}
-.tow-columns{
-    background-color: #EEE;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto ;  
-    padding: 30px;
-}
-.tow-columns .content-items{
-    background-color: #13054f;
-    width: 80%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    color: #FFF;
-    
-}
-.tow-columns div span{
-    text-decoration: underline;
-}
-.content-meta{
-    text-decoration: none;
-}
-a{
-    text-decoration: none;
-}
-.content-items span:hover{
-    color: #cf632d;
-    font-weight: bolder;
 }
 
 /*Footer Styles */
@@ -417,6 +415,96 @@ a{
     padding:10px;
 }
 
+/*enrolment blocks style*/
+.card_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.card_col{
+    margin-right: 10px;
+}
+.card_row{
+    width: 98%;
+    height: auto;
+    border: 1px solid #7ac4f5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+#enrlmnt_img{
+    width: 100%;
+    height: 7rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ a{
+    color: #000;
+    text-align: start;
+}
+ul{
+    list-style: none;
+}
+
+   
 
 
+/*Student_details.html style */
+.details_container{
+    max-width: 90%;
+    background: #FFF;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+.column_25{
+    width: 25%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column_25 img{
+   width: 100px;
+   height: 100px;
+    
+    
+}
+.column_25 h3{
+    display: inline; 
+}
+.column_75{
+    width: 75%;
+    float: left;
+    flex-direction: column;
+    
+}
+.student_table{
+    width: 50%;
 
+}
+td:first-child:hover{
+    background-color: #FFF;
+    cursor: default;
+}
+.student_table tr td{
+    padding: 10px;
+    border: none;
+}

@@ -2,8 +2,10 @@
 <html lang="eng">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Help and Support</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mobile.css">
+        <link rel="stylesheet" href="css/tablet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="js/javascript.js"></script>
     </head>
@@ -11,26 +13,27 @@
     <header>
         <div class="container">
             <div class="icon">
-                <a href="#"><i class="fa fa-home outline" ></i></a>
+                <a href="./index.html"><i class="fa fa-home outline" ></i></a>
             </div>
             <div class="menu">
                 <ul>
-                    <li>
-                        <a href="#">Courses</a>
-                        <a href="#">Students</a>
-                        <a href="#">Industry</a>
-                        <a href="#">Study Online</a>
-                        <a href="#">About Us</a>
-                        <a href="#">News and Events</a></li>           
+                    <li id="courses">
+                            <a href="enrolement.html">Enrolments</a>
+                        </li> 
+                        <li><a href="student_details.html">Student Detalis</a></li>
+                        <li><a href="marks_results.html">Results</a></li>
+                        <li><a href="help-support.html">Help and Support</a></li>
+                                 
                 </ul>   
             </div>
             <div class="search">
-                    <input type="text" placeholder="search...">
-                </div>
+                <input type="text" placeholder="search...">
+            </div>
         </div>
     </header>
         <!--Help $ support form-->
-       
+     <body>
+        
        <div class="form-container" onsubmit="return validate_form()" id="form" name="forms">
         <div class="row">
              <h2>Share With Us</h2></div>
@@ -65,24 +68,25 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="student_id">Student ID</label>
+                    <label for="student_id">Student ID</label>      
                 </div>
                 <div class="col-75">
-                    <input type="text" name="student_id" id="student_id" placeholder="Your Student ID...">
+                    <input type="text" name="student_id" id="student_id" placeholder="Your Student ID..." onmouseover="idShow()" onmouseout="idHide()">
+                    <p id="id_span"></p>
                 </div>
             </div>
-            <div class="row">
+             <div class="row">
                 <div class="col-25">
-                    <label for="gender">Gender</label>
+                    <label for="">Study Method</label>
                 </div>
                 <div class="col-75">
-                    <input type="radio" name="gender" id="female_radio" value="Female">
-                    <label for="female_radio">Female</label>
-                    <input type="radio" name="gender" id="male_radio" value="Male">
-                    <label for="male_radio">Male</label>
-                    
+                    <input type="checkbox" class="options" id="study_chkbx" value="online">
+                    <label for="study_chkbx">onlie</label>
+                    <input type="checkbox" class="options" id="study_chkbx" value="on-campus">
+                    <label for="study_chkbx">On-Campus</label>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-25">
                     <label for="campus">Campus</label>
@@ -98,6 +102,18 @@
             </div>
             <div class="row">
                 <div class="col-25">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="gender" class="options" id="female_radio" value="Female">
+                    <label for="female_radio">Female</label>
+                    <input type="radio" name="gender" class="options" id="male_radio" value="Male">
+                    <label for="male_radio">Male</label>
+                    
+                </div>
+           
+            <div class="row">
+                <div class="col-25">
                     <label for="subject">How Can We Help</label>
                 </div>
                 <div class="col-75">
@@ -109,28 +125,29 @@
             </div>
         </form>
        </div>
-<body>
-<!--Footer-->
-<footer class="footer">
-    <div class="flex-container">
-       <div class="footer_img">
-            <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
-            <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
-        </div> 
-        <div class="social-media">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-youtube"></i>
     </div>
-    </div>
-        
-    <div id="footer_text">
-        <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
-             We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
-             We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
-            </div>
-        
+    <!--footer-->
+   <footer class="footer">
+        <div class="flex-container">
+        <div class="footer_img">
+                <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
+                <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
+            </div> 
+            <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        </div>
+            
+        <div id="footer_text">
+            <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
+                We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
+                We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
+                </div>
+    </footer>    
+ 
+    </body>
 
-</footer>
 </html>
