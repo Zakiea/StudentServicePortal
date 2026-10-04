@@ -4,6 +4,7 @@ body{
     margin-left: 0;
     background-color: #EEE;
     padding-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container{
@@ -22,8 +23,9 @@ div .icon{
     display: inline;
     color: transparent;
     -webkit-text-stroke: 1px #000; 
-   
 }
+
+
 div .icon i{
     font-size: 20px;
     padding: 15px;
@@ -44,6 +46,21 @@ div .menu ul li{
     color: #EEE;
     padding:36px 10px 37px 10px ;
     
+}
+
+.fa-solid {
+    color: #fff;
+    
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+  gap: 4px;
+    
+}
+#menu-toggle{
+    display: none;
 }
 .menu{
     margin-left: -40px;
@@ -78,43 +95,6 @@ margin-right: 5px;
     border-radius: 5px;
     background-color: #281481;
 }
-/*dropdown menu style */
-#courses{
-    position: relative;
-}
-.dropdown_menu{
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 20px;
-    background-color: #fff;
-    z-index: 10;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: none;
-}
-#courses:hover .dropdown_menu {
-    display: block;
-}
-.dropdown_menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-#courses a:hover .dropdown_menu{
-    display: flex;
-    margin-top: 0;
-    padding: 0;
-}
-.dropdown_content li{
-   margin-bottom: 10px;
-   font-weight: 600;
-   color: #2c2c2c;
-}
-.dropdown_content li a:hover{
-    background-color: #555;
-} */ 
 
 /*Banner style*/
 .banner_img{
@@ -136,6 +116,7 @@ margin-right: 5px;
     transform:  translate(-50%, -50%);
     text-align: center;
     color: FFF;
+    font-family: Georgia, 'Times New Roman', Times, serif, Times, serif;
 }
 .banner_logo{
     width: 300px;
@@ -150,7 +131,8 @@ margin-right: 5px;
 
 /* index.html Body Content Style */
 .content{
-    margin-top: 20px;
+    margin-top: 5rem;
+    
 }
 .tow-columns{
     background-color: #EEE;
@@ -181,6 +163,55 @@ a{
     color: #cf632d;
     font-weight: bolder;
 }
+
+/*info-day div styles in index.html*/
+.info_container{
+    width: 80%;
+    background-color: #e4e1e1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7rem;
+    border-radius: 20px;
+    
+   
+}
+.info_container .info_image {
+    width: 50%;
+    height: 19rem;
+    margin-bottom: 0;
+}
+.info_container .info_image img{
+    width: 100%;
+   height: 19rem;
+    margin-bottom: 0;
+    border-radius: 20px;
+    margin-bottom: 0;
+
+}
+.info_container .info_image img:hover{
+   opacity: 0.9;
+}
+.info_container .info_description{
+    margin-left: 4rem;
+}
+.info_container .info_description h2{
+    text-align: start;
+    font-weight: normal;
+}
+.info_container .info_description p{
+    line-height: 1.7rem;
+   
+}
+.info_container .info_description a{
+    background-color: #220994;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
 /*-------------------------------------------------*/
 /*Marks and Result page styles */
 .current_subj,.previous_subj{
@@ -188,6 +219,7 @@ a{
     justify-content: center;
    
 }
+
 h3{
     text-align: center;
     margin-top: 50px;
@@ -417,10 +449,12 @@ textarea #form_subject{
 
 /*enrolment blocks style*/
 .card_container{
-    width: 100%;
+    position: relative;
+    width: 100%; 
     display: flex;
     flex-direction: row;
     margin-right: 10px;
+    
 }
 .card_col{
     margin-right: 10px;
@@ -452,8 +486,64 @@ ul{
     list-style: none;
 }
 
-   
+#toggle_btn{
+    display: flex;
+    align-self: flex-end;  
+    margin-right: 20px;  
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #0ad1b7;
+    background-color: #cccccc;
+    cursor: pointer;
 
+}  
+#toggle_btn:focus{
+    border: 2px solid  #7ac4f5;
+}
+#toggle_image{
+    width: 20px;
+    height: 20px;
+   }
+.toggle_content{
+    width: fit-content;
+    position: absolute;
+    transform: translate3d(0,8.6rem,10rem);
+    z-index: 0;
+    align-self: flex-end;
+    border-radius: 5px;
+    padding: .5rem 0;
+    padding-right: 1.4rem;
+    border: 1px solid #555;
+    margin-right: 20px;
+    margin-top: 0;
+    background-color: #fff;
+    display: none; 
+
+}
+#toggle_content2{
+position: absolute;
+  transform: translate3d(0.14rem, 10rem);
+}
+#toggle_content3{
+position: absolute;
+   transform: translate3d(0,8.7rem, 10rem);
+}
+#toggle_content4{
+    position: absolute;
+    transform: translate3d(0, 8.6,18rem);
+}
+
+.toggle_item{   
+    display: block;
+    width: 100%; 
+    padding: .25rem .7rem;
+}
+.toggle_content .toggle_item:hover{
+    background-color: #2604e9f8;
+    color: #fff;
+}
 
 /*Student_details.html style */
 .details_container{

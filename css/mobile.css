@@ -5,7 +5,12 @@
     /*index.html mobile view*/
   
     .container{
-        padding: 14px 0 19px 0;
+        display: flex;
+    flex-wrap: wrap; /* Allows menu to drop into a row below on mobile viewports */
+    justify-content: space-between;
+    align-items: center;
+    padding-top:0 ;
+    padding-bottom: 0;
     }
     header a{
         float: none;
@@ -17,8 +22,48 @@
     header .search{
         display: none;
     }
+    
+    #home_icon{
+        display: none;
+    }
+    #menu-toggle{
+        display: none;
+    }
+    .icon{
+        background-color: #13054f;
+    }
+    .hamburger{
+        display: flex;   
+        margin-top: 0; 
+        
+    }
+    .menu{
+        width: 100%;
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        
+    }
+    .menu_links{
+    list-style: none;
+    }
+    .menu_links li a{
+        display: block;
+        padding: 12px;
+        text-align: center;
+        
+    }
+    .menu-toggle:checked ~ .menu {
+    max-height: 300px;
+    
+     /* High enough value to fit all links */
+  }
+  
+
     .banner_img #banner_id{
         width: 100%;
+       
     }
     .banner_logo{
         width: 30%;
@@ -29,7 +74,7 @@
     }
     .banner_content{
         position: absolute;
-        top: 18%;
+        top: 50%;
         left: 50%;
     }
      .tow-columns{
@@ -43,7 +88,8 @@
     }
     /*----------------------student_details.html---------------------------*/
     .details_container{
-        width: 100%;   
+        width: 100%; 
+        overflow: auto;  
     }
     .details_container img{
         width: 50px;
@@ -69,6 +115,7 @@
     .units_container{
         width: 100%; 
     }
+    
     /*--------------------enrolement.html-----------------------------*/
     .marks_container{
         width: 95%;
@@ -91,6 +138,27 @@
     .course_search{
        width: 50%;
     }
+    /*info day*/
+    .info_container{
+        width:100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .info_container.info_image{
+        width: 100%;
+    }
+    .info_image{
+       display: none;
+        
+    }
+    .toggle_content2{
+        position: sticky;
+        top: 0;
+        
+        
+    }
 
     /*------------------footer----------------*/
     
@@ -110,15 +178,47 @@
         width: 100%;
         padding: 14px 0 19px 0;
     }
-    .icon i{
-        display:none;
-    }
+    
     header a{
         float: none;
         display: inline;
         text-align: left;
         font-size: 10px;   
     }
+     .hamburger{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+   .menu-toggle{
+        display: flex;
+    }
+    .menu-links{
+    position: absolute;
+    top: 60px; /* Adjust according to your navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0; /* Menu starts completely hidden */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    }
+    .menu-links li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-links a{
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #444;
+    }
+  
+
     #banner_id{
         width: 100%;
     }
@@ -145,6 +245,8 @@
         width: 40%;
         margin-right: 25%;
     }
+    
+    
     /*--------------footer---------------*/
     
     .footer{

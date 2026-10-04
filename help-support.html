@@ -2,21 +2,29 @@
 <html lang="eng">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
         <title>Help and Support</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="css/tablet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="js/javascript.js"></script>
+       
     </head>
 <body>
     <header>
-        <div class="container">
-            <div class="icon">
-                <a href="./index.html"><i class="fa fa-home outline" ></i></a>
-            </div>
+         <div class="container">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <div class="icon">
+                    <a href="enrolement.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                        <!-- Hidden checkbox for state toggling -->      
+                            <!-- Hamburger icon label -->
+                            <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
+                                <i class="fa-solid fa-bars" ></i>
+                            </label>   
+                </div>
             <div class="menu">
-                <ul>
+                <ul class="menu_links">
                     <li id="courses">
                             <a href="enrolement.html">Enrolments</a>
                         </li> 
@@ -38,7 +46,7 @@
         <div class="row">
              <h2>Share With Us</h2></div>
         
-        <form action="" id="forms">
+        <form action="/submit" id="forms">
             <div class="row">
                 <div class="col-25">
                     <label for="fname">First Name</label>
@@ -117,8 +125,9 @@
                     <label for="subject">How Can We Help</label>
                 </div>
                 <div class="col-75">
-                    <textarea name="subject" id="form_subject" placeholder="Ask Us / How Can We Help.."></textarea>
+                    <textarea type="text" name="subject" id="form_subject" placeholder="Ask Us / How Can We Help.."></textarea>
                 </div>
+                
             </div>
             <div class="row">
                 <input type="button" name="submit" id="submit_btn" value="Submit" onclick="validate_form()">

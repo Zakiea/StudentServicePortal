@@ -10,26 +10,29 @@
     </head>
     <body>
         <header>
-    <div class="container">
-        <div class="icon">
-            <a href="./index.html"><i class="fa fa-home outline" ></i></a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li id="courses">
-                            <a href="enrolement.html">Enrolments</a>
-                        </li> 
-                        <li><a href="student_details.html">Student Detalis</a></li>
-                        <li><a href="marks_results.html">Results</a></li>
-                        <li><a href="help-support.html">Help and Support</a></li>
-                           
-            </ul>   
-        </div>
-        <div class="search">
-                <input type="text" placeholder="search...">
+            <div class="container">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <div class="icon">
+                        <a href="enrolement.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                            <!-- Hidden checkbox for state toggling -->      
+                                <!-- Hamburger icon label -->
+                                <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
+                                    <i class="fa-solid fa-bars" ></i>
+                                </label>   
+                    </div>
+                    <div class="menu">
+                        <ul class="menu_links">
+                            <li id="courses"><a href="enrolement.html">Enrolments</a></li>
+                            <li><a href="student_details.html">Student Detalis</a></li>
+                            <li><a href="marks_results.html">Results</a></li>
+                            <li><a href="help-support.html">Help and Support</a></li>          
+                        </ul>   
+                    </div>
+                    <div class="search">
+                            <input type="text" placeholder="search...">
+                        </div>
             </div>
-    </div>
-</header>
+    </header>
 
 <div class="units_container">
     <h3 id="current_units">Current Subject marks and Results</h3>
@@ -95,8 +98,8 @@
             <tr>
                 <td>ITS202</td>
                 <td>Math Foundations</td>
-                <td>Core</td>
                 <td>9</td>
+                <td>core</td>
                 <td>100%</td>
             </tr>
             <tr>
@@ -109,8 +112,8 @@
             <tr>
                 <td>ITS2014</td>
                 <td>Full Stack Web Development</td>
-                <td>Core</td>
                 <td>12</td>
+                <td>Selective</td>
 
                 <td>100%</td>
             </tr>

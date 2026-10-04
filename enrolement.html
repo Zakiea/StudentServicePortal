@@ -7,27 +7,39 @@
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="css/tablet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="js/javascript.js"></script>
     </head>
     <body>
         <header>
-            <div class="container"> 
+            <div class="container">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <div class="icon">
-                    <a href="./index.html"><i class="fa fa-home outline" ></i></a>
+                    <a href="index.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                        <!-- Hidden checkbox for state toggling -->      
+                            <!-- Hamburger icon label -->
+                            <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
+                                <i class="fa-solid fa-bars" ></i>
+                            </label>   
                 </div>
                 <div class="menu">
-                    <ul>
+                    <ul class="menu_links">
                         <li id="courses">
                             <a href="enrolement.html">Enrolments</a>
                         </li> 
                         <li><a href="student_details.html">Student Detalis</a></li>
                         <li><a href="marks_results.html">Results</a></li>
                         <li><a href="help-support.html">Help and Support</a></li>
-                            
                     </ul> 
                 </div>
-                <div class="search">
-                     <input type="text" placeholder="search...">
-                </div>
+                     <!--<div class="profile_dropdwn">
+                        <select name="profil_dropdown" id="profile_dropdwn">
+                            <option value="profile"><a href="student_details.html">Profile</a></option>
+                            <option value="gredes_overview"><a href="marks_results.html">Grades Overview</a></option>
+                            <option value="calender"><a href="https://mychisholm.edu.au/calendar/view.php?view=month">Calender</a></option> --><!--Chisholm's Calender page link-->
+                           <!--<option value="logout"><a href="#">Log out</a></option>
+                        
+                        </select>
+                    </div>--> 
             </div>
         </header>
 <!--enrolement Body content-->
@@ -75,18 +87,40 @@
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
+                            <button id="toggle_btn" class="toggle_btn" onclick="togglefunction1()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content1" class="toggle_content">
+                                    <a href="#" class="toggle_item">Star this course</a>
+                                   <a href="#" class="toggle_item">Remove this course</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card_row">
+                            <a href="#"><img id="enrlmnt_img" src="images/mychisholm.png" alt="mychisholm"></a> 
+                            <ul>
+                                <li><a href="#">Getting Started </a></li>
+                            </ul>
+                            <button id="toggle_btn" class="toggle_btn" onclick="togglefunction2()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content2" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                         <div class="card_row">
                             <a href="#"><img id="enrlmnt_img" src="images/mychisholm.png" alt="mychisholm"></a> 
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                                <li><a href="#"> my Chisholm</a></li>
                             </ul>
-                        </div>
-                        <div class="card_row">
-                            <a href="#"><img id="enrlmnt_img" src="images/mychisholm.png" alt="mychisholm"></a> 
-                            <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
-                            </ul>
+                            <button id="toggle_btn" class="toggle_btn" onclick="togglefunction3()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content3" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -96,18 +130,39 @@
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
+                            <button id="toggle_btn" onclick="togglefunction4()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content4" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                         <div class="card_row">
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png." alt="image"></a> 
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
+                            <button id="toggle_btn" onclick="togglefunction5()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content5" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                         <div class="card_row">
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
+                            <button id="toggle_btn" onclick="togglefunction6()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content6" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                     </div>
                      <div class="card_col">
@@ -116,18 +171,40 @@
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
+                            <button id="toggle_btn" onclick="togglefunction7()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content7" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card_row">
+                            <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
+                            <ul>
+                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                            </ul>
+                            <button id="toggle_btn" onclick="togglefunction8()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content8" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                         <div class="card_row">
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
                             <ul>
                                 <li><a href="#">Getting Started with my Chisholm</a></li>
                             </ul>
-                        </div>
-                        <div class="card_row">
-                            <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
-                            <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
-                            </ul>
+                            <button id="toggle_btn" onclick="togglefunction9()">
+                                <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
+                            </button>
+                            <div id="toggle_content9" class="toggle_content">
+                                    <a class="toggle_item">Star this course</a>
+                                    <a class="toggle_item">Remove this course</a>
+                            </div>
                         </div>
                     </div>
             

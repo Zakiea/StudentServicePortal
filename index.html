@@ -11,26 +11,32 @@
 </head>
 <body>
 <header>
-    
     <div class="container">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <div class="icon">
-            <a href="#"><i class="fa fa-home outline" ></i></a>
+            <a href="#"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+              <!-- Hidden checkbox for state toggling -->      
+                    <!-- Hamburger icon label -->
+                    <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars" ></i>
+                    </label>   
         </div>
         <div class="menu">
-            <ul>
+            <ul class="menu_links">     
                 <li id="courses">
-                    <!--the links are copied from chisholm website to connect so that students have access main chisholm website-->
-                    <a href="https://www.chisholm.edu.au/courses">Courses</a> 
+                    <!--the links are copied from chisholm website to connect so that students have access to main chisholm website-->
+                    <a href="#">Courses</a> 
                 </li> 
-                <li><a href="https://www.chisholm.edu.au/students">Students</a></li>
-                <li><a href="https://www.chisholm.edu.au/industry">Industry</a></li>
-                <li><a href="https://www.chisholm.edu.au/study-online">Study Online</a></li>
-                <li><a href="https://www.chisholm.edu.au/about-us">About Us</a></li> 
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Industry</a></li>
+                <li><a href="#">Study Online</a></li>
+                <li><a href="#">About Us</a></li> 
+                 
             </ul> 
         </div>
-        <div class="search">
+        <!--<div class="search">
                 <input type="text" placeholder="search...">
-            </div>
+         </div>-->
     </div>
 </header>
 <!--Banner-->
@@ -68,6 +74,20 @@
             </a>    
     </aside>
 </section>
+<!--info day-->
+
+    <div class="info_container">
+        <div class="info_image">
+            <img src="images/info-day-tile.jpg" alt="info_day_image">
+        </div>
+        <div class="info_description">
+            <h2>Join Us at Info Day - register now</h2>
+            <p>Experience Chisholm up close with campus tours, <br>
+            information sessions and direct access to teachers <br>
+            who can help you plan your future study and career journey.</p>
+            <a href="https://www.chisholm.edu.au/news-and-events/events/info-days"> Find out more about Info Day</a> <!--Chisholm's info day page Link-->
+        </div>
+    </div>
 
 <!--Footer-->
 <footer class="footer">

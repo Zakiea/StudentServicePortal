@@ -10,116 +10,119 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-<header> 
-    <div class="container">
-        <div class="icon">
-            <a href="./index.html"><i class="fa fa-home outline" ></i></a>
+    <header> 
+        <div class="container">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <div class="icon">
+                <a href="enrolement.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                <!-- Hidden checkbox for state toggling -->      
+                        <!-- Hamburger icon label -->
+                        <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
+                            <i class="fa-solid fa-bars" ></i>
+                        </label>   
+            </div>
+            <div class="menu">
+                <ul class="menu_links">
+                    <li id="courses"><a href="enrolement.html">Enrolments</a></li> 
+                    <li><a href="student_details.html">Student Detalis</a></li>
+                    <li><a href="marks_results.html">Results</a></li>
+                    <li><a href="help-support.html">Help and Support</a></li>
+                </ul> 
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="search...">
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li id="courses">
-                    <a href="enrolement.html">Enrolments</a>
-                </li> 
-                <li><a href="student_details.html">Student Detalis</a></li>
-                <li><a href="marks_results.html">Results</a></li>
-                <li><a href="help-support.html">Help and Support</a></li>
-            </ul> 
-        </div>
-        <div class="search">
-                <input type="text" placeholder="search...">
-        </div>
-    </div>
-</header>
+    </header>
 <!--student details container-->
-<div class="details_container">
-        <div class="column_25">
-            <img src="images/profile.png" alt="User Profile Picture here">
-            <h3>Student Name</h3>
-        </div>
-        <div class="column_75">
-            <table class="student_table">
-                <tr>
-                    <td >Student ID</td>
-                    <td>s12345</td>
-                </tr>
-                <tr>
-                    <td>First Name</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>Last Name</td>
-                    <td>B</td>
-                </tr>
+    <div class="details_container">
+            <div class="column_25">
+                <img src="images/profile.png" alt="User Profile Picture here">
+                <h3>Student Name</h3>
+            </div>
+            <div class="column_75">
+                <table class="student_table">
+                    <tr>
+                        <td >Student ID</td>
+                        <td>s12345</td>
+                    </tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Hellen</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>Kanaga</td>
+                    </tr>
 
-                <tr>
-                    <td>Email</td>
-                    <td>s12345@gmial.com</td>
-                </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>s12345@gmial.com</td>
+                    </tr>
 
-                <tr>
-                    <td>Gender</td>
-                    <td>F</td>
-                </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Female</td>
+                    </tr>
 
-                <tr>
-                    <td>Date of Birth</td>
-                    <td>12-04-1999</td>
-                </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td>12-20-2000</td>
+                    </tr>
 
-                <tr>
-                    <td>Address</td>
-                    <td>23 Raymond St, Dandenong</td>
-                </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>23 Raymond St, Dandenong</td>
+                    </tr>
 
-                <tr>
-                    <td>Course</td>
-                    <td>IT</td>
-                </tr>
+                    <tr>
+                        <td>Course</td>
+                        <td>IT</td>
+                    </tr>
 
-                <tr>
-                    <td>Semester</td>
-                    <td>2</td>
-                </tr>
+                    <tr>
+                        <td>Semester</td>
+                        <td>2</td>
+                    </tr>
 
-                <tr>
-                    <td>Phone Number</td>
-                    <td>s12345</td>
-                </tr>
-                <tr>
-                    <td>Study Location</td>
-                    <td>Berwick</td>
-                </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>s12345</td>
+                    </tr>
+                    <tr>
+                        <td>Study Location</td>
+                        <td>Berwick</td>
+                    </tr>
 
-                <tr>
-                    <td>Student email</td>
-                    <td>s12345@mychisholm.edu.au</td>
-                </tr>
-            </table>
-        </div>
-</div>
-
-<!--Footer-->
-<footer class="footer">
-    <div class="flex-container">
-       <div class="footer_img">
-            <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
-            <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
-        </div> 
-        <div class="social-media">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-youtube"></i>
-        </div>
-    </div>
-        
-    <div id="footer_text">
-        <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
-             We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
-             We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
+                    <tr>
+                        <td>Student email</td>
+                        <td>s12345hellen@mychisholm.edu.au</td>
+                    </tr>
+                </table>
+            </div>
     </div>
 
-</footer>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="flex-container">
+        <div class="footer_img">
+                <img id="childsafe_logo"src="images/childsafe-logo.png" alt="childsafe-logo">
+                <img id="logovicgov" src="images/logovicgov.png" alt="logovicgov">
+            </div> 
+            <div class="social-media">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+            
+        <div id="footer_text">
+            <p>Chisholm acknowledges the Bunurong people of the Kulin Nation as the Traditional Custodians of the Country on which our campuses are located.
+                We recognise their continuing connection to land and waters and thank them for protecting the Country and its ecosystems that we enjoy today.
+                We pay our respects to Elders, past and present, and extend that respect to all First Nations people.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
