@@ -68,20 +68,7 @@ StudentServicePortal/
 Since this is a static website, you can run it in any of these ways:
 
 1. Open `index.html` directly in a browser.
-2. Use a local web server such as VS Code Live Server.
-3. Serve the folder with a simple HTTP server if needed.
-
-Example:
-
-```bash
-python -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000
-```
+2. navigate through the pages
 
 ## Notes
 
@@ -89,8 +76,8 @@ This repository is a front-end mock/student portal prototype. It does not curren
 
 ## License
 
-This project does not currently include a license file. If needed, you may add one depending on your intended usage.
+This project does not currently include a license file.
 
 ## Author
 
-Zakiea
+Zakia
