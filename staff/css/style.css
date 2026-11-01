@@ -1,0 +1,676 @@
+body{
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #EEE;
+    padding-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color:#13054f;
+    display: flex;
+    justify-items: center;
+    padding: 20px 0 20px 0 ;
+   
+}
+div .icon{
+    display: inline;
+    color: transparent;
+    -webkit-text-stroke: 1px #000; 
+}
+
+
+div .icon i{
+    font-size: 20px;
+    padding: 15px;
+}
+div .icon a{ 
+    text-decoration: none;
+    color: #EEE;
+    padding:38px 10px 35px 10px ;
+
+}
+div .menu ul li{
+    display: inline;
+    list-style: none;
+   
+}
+.menu a{
+    text-decoration: none;
+    color: #EEE;
+    padding:36px 10px 37px 10px ;
+    
+}
+
+.fa-solid {
+    color: #fff;
+    
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+  gap: 4px;
+    
+}
+#menu-toggle{
+    display: none;
+}
+.menu{
+    margin-left: -40px;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+div .icon a:hover{
+    background-color: #ffe4c4;
+    color: #000;
+}
+div .menu ul li a:hover{
+    background-color:#ffe4c4;
+    color: #000;
+    
+}
+.menu a:active{
+    background-color:#ffe4c4 ;
+}
+
+
+h3{
+    color: #13054f;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-bottom: -3rem;
+    
+}
+.search input{
+
+    margin-right: 3rem;
+   padding: 10px;
+   border: 1px solid #13054f;
+   border-radius: 2rem;
+   width: 15%;
+   display: inline;
+   float: right;
+   margin-bottom: 0.5rem;
+
+}
+.search #submit_btn {
+    width: 7%;
+    background-color: #13054f;
+    padding:10px ;
+    margin-right: 0.5rem;
+   margin-top:0.8rem;
+}
+.container .search input[type=text]{
+    
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #13054f;
+    border-radius: 5px;
+    background-color: #281481;
+}
+
+/*Banner style*/
+.banner_img{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.banner_img #banner_id{
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    display: block;
+}
+.banner_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    text-align: center;
+    color: FFF;
+    font-family: Georgia, 'Times New Roman', Times, serif, Times, serif;
+}
+.banner_logo{
+    width: 300px;
+    margin-bottom: 10px;
+}
+.banner_content h1 {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFF;
+}
+
+/* index.html Body Content Style */
+.content{
+    margin-top: 5rem;
+    
+}
+.tow-columns{
+    background-color: #EEE;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;  
+    padding: 30px;
+}
+.tow-columns .content-items{
+    background-color: #13054f;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    color: #FFF;
+    
+}
+.tow-columns div span{
+    text-decoration: underline;
+}
+.content-meta{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.content-items span:hover{
+    color: #cf632d;
+    font-weight: bolder;
+}
+
+/*info-day div styles in index.html*/
+.info_container{
+    width: 80%;
+    background-color: #e4e1e1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7rem;
+    border-radius: 20px;
+    
+   
+}
+.info_container .info_image {
+    width: 50%;
+    height: 19rem;
+    margin-bottom: 0;
+}
+.info_container .info_image img{
+    width: 100%;
+   height: 19rem;
+    margin-bottom: 0;
+    border-radius: 20px;
+    margin-bottom: 0;
+
+}
+.info_container .info_image img:hover{
+   opacity: 0.9;
+}
+.info_container .info_description{
+    margin-left: 4rem;
+}
+.info_container .info_description h2{
+    text-align: start;
+    font-weight: normal;
+}
+.info_container .info_description p{
+    line-height: 1.7rem;
+   
+}
+.info_container .info_description a{
+    background-color: #220994;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+/*-------------------------------------------------*/
+
+/*-----------------------------------------------*/
+/* help and support styles  */
+/* style the container*/
+.form-container{
+    width: 90%;
+    border-radius: 5px;
+    background-color:#e0dedc;
+    padding: 20px;
+    margin-left: auto;
+   margin-top: auto;
+   margin-right: auto;
+}
+
+.row input, .row select, .row textarea{
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    
+}
+/* style the lable to display next to the inputs*/
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin-left: 20px;
+}
+input[type=text], select, textarea,label{
+    margin-top: 10px;
+}
+/*Form heading style*/
+h2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+    color: #13054f;
+}
+form{
+    margin-top: 20px;
+}
+/*floating column for labels: 25% width */
+.col-25{
+    float: left;
+    width:25%;
+    margin-top: 6px;
+}/* floating columns for inputs: 75%*/
+.col-75{
+    float: left;
+    width:75%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+textarea #form_subject{
+    height: auto;
+}
+#submit_btn{
+    width: 12.5%;
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    border: none;
+    background-color: #13054f;
+    color: #EEE;
+}
+#cancle_btn{
+    width: 10%;
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    border: none;
+    background-color: #13054f;
+    color: #EEE;
+    text-align: center;
+}
+#cancle_btn:hover{
+    background-color:#f0986c;
+    color: #000;
+}
+
+#submit_btn:hover{
+    background-color:#f0986c;
+    color: #000;
+}
+.btn-edit, .btn-delete{
+    padding:10px;
+    color: #cf632d;
+}
+.btn-edit:hover, .btn-delete:hover{
+    color: #220994;
+}
+
+/*Footer Styles */
+.footer{
+     background-color: #AAA;
+     padding: 20px 0;
+     margin-bottom: 0;
+     margin-top: 40px;
+}
+/*footer flex-container to display footer items besides eachother*/
+.flex-container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+/*Footer TAFEvictoria logo resolution change*/
+.footer_img #logovicgov {
+    width: 30%;
+    margin-right: 15px;
+}
+/*footer childsafe image resolution change*/
+.footer_img #childsafe_logo {
+    width: 60%;
+    margin-right: 10px;
+}
+/*footer social media icon styles*/
+.social-media i{
+    font-size: 30px;
+    color:#13054f;
+    margin-left: 15px;
+    cursor: pointer;
+}
+/* footer Paragraph style */
+#footer_text p{
+    padding: 10px 50px 40px 50px;
+    text-align: center;
+}
+
+/*-----------------------------------------------*/
+/*Enrolment Page Style*/
+.marks_container{
+    width: 90%;
+    background-color: #fff;
+    padding: 1px 10px 3px 10px;
+    margin: 10px 20px 10px 20px;
+    margin-left: 50px;
+}
+.top_bar{
+    width: 100%;
+    background-color: #13054f;
+    color: #EEE;
+    border-radius: 8px;
+}
+.top_bar h1{
+    padding-top: 5px;
+    color: #7ac4f5;
+}
+.top_bar h2{
+    color: #FFF;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.top_bar h1, h2{
+    margin:20px;
+}
+.starred_course{
+    position: relative;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    border: 1px solid #7ac4f5;
+    border-radius: 8px;
+    padding-bottom: 20px;;
+}
+.starred_course h4{
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: left;
+}
+.starred_course img{
+    width: 10%;
+    height: 20%;   
+}
+.starred_course_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main_content{
+    position: relative;
+    min-width: 0;
+    border: 1px solid #7ac4f5;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.main_content h4{
+    margin-left: 15px;
+    
+}
+.main_content #cousrse_list{
+    width: 5%;
+    padding: 10px;
+    margin: 10px; 
+    display: inline-block;
+}
+.main_content .course_search{
+    padding: 0;
+    
+}
+.main_content .drpdwn_search{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.main_content #sort_course{ 
+    width: 17%;
+}
+#card,#cousrse_list, #sort_course, .course_search input{
+    border-radius: 10px;
+}
+#sort_course, #card{
+    
+    height: 40px;
+    margin-left: 10px;
+}
+#card{
+    width: 8%;
+}
+.course_search input{
+    padding:10px;
+}
+
+/*enrolment blocks style*/
+.card_container{
+    position: relative;
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    
+}
+.card_col{
+    margin-right: 10px;
+}
+.card_row{
+    width: 98%;
+    height: auto;
+    border: 1px solid #7ac4f5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+#enrlmnt_img{
+    width: 100%;
+    height: 7rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ a{
+    color: #000;
+    text-align: start;
+}
+ul{
+    list-style: none;
+}
+
+#toggle_btn{
+    display: flex;
+    align-self: flex-end;  
+    margin-right: 20px;  
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #0ad1b7;
+    background-color: #cccccc;
+    cursor: pointer;
+
+}  
+#toggle_btn:focus{
+    border: 2px solid  #7ac4f5;
+}
+#toggle_image{
+    width: 20px;
+    height: 20px;
+   }
+.toggle_content{
+    width: fit-content;
+    position: absolute;
+    transform: translate3d(0,8.6rem,10rem);
+    z-index: 0;
+    align-self: flex-end;
+    border-radius: 5px;
+    padding: .5rem 0;
+    padding-right: 1.4rem;
+    border: 1px solid #555;
+    margin-right: 20px;
+    margin-top: 0;
+    background-color: #fff;
+    display: none; 
+
+}
+#toggle_content2{
+position: absolute;
+  transform: translate3d(0.14rem, 10rem);
+}
+#toggle_content3{
+position: absolute;
+   transform: translate3d(0,8.7rem, 10rem);
+}
+#toggle_content4{
+    position: absolute;
+    transform: translate3d(0, 8.6,18rem);
+}
+
+.toggle_item{   
+    display: block;
+    width: 100%; 
+    padding: .25rem .7rem;
+}
+.toggle_content .toggle_item:hover{
+    background-color: #2604e9f8;
+    color: #fff;
+}
+
+/*Student_details.html style */
+.details_container{
+    max-width: 90%;
+    background: #FFF;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+.column_25{
+    width: 25%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column_25 img{
+   width: 100px;
+   height: 100px;
+    
+    
+}
+.column_25 h3{
+    display: inline; 
+}
+.column_75{
+    width: 75%;
+    float: left;
+    flex-direction: column;
+    
+}
+.student_table{
+    width: 50%;
+
+}
+td:first-child:hover{
+    background-color: #FFF;
+    cursor: default;
+}
+.student_table tr td{
+    padding: 10px;
+    border: none;
+}
+/*Marks and Result page styles */
+.current_subj,.previous_subj{
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+.unit_table,tr,td,th{
+    border-bottom: 1px solid #555; 
+    border-collapse: collapse;
+}
+.unit_table td,tr,th{
+    padding:15px
+}
+.mange_table td{
+    padding:10px
+}
+
+ tr:hover{
+    background-color: #ffe4c4;
+}
+th{
+    background-color: #8f8d94;
+    color: #FFFFFf;
+}
+td:first-child:hover{
+    background-color: #cf632d;
+    cursor: pointer;
+}
+.previous_subj td:last-child{
+   background-color: green;
+}
+
+/* Management Table Design*/
+.mange_table{
+    width: 95%;
+    margin: 30px 15px;
+    background-color: #EEE;
+}
+.mange_table td{
+    text-align: center;
+    width: 10%;
+    background-color: #EEE;
+}
+
+.search, .log-out{
+margin-left: auto;
+margin-right: 1.2rem;
+
+}
+.log-out input{
+    padding: 0.7rem;
+    margin-top: -0.45rem;
+    border-radius: 1rem;
+}
+.log-out input:hover{
+    background-color: #cf632d;
+    border-color: #cf632d;
+}

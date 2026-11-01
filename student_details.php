@@ -1,3 +1,35 @@
+ <?php
+    session_start();
+    require_once("settings.php");
+    $conn= mysqli_connect($host,$user,$pswd,$dbnm);
+    if (!$conn){
+    die('Could not connect mysql Server:' .mysql_error());
+}
+if (!isset($_SESSION['student_id'])){
+    header("Location: login.php");
+    exit;
+}
+$curr_student_id = $_SESSION['student_id'];
+
+$sql ="SELECT * FROM student_details where student_id =?";
+$stmt=$conn ->prepare($sql);
+$stmt ->bind_param("s",$curr_student_id);
+$stmt -> execute();
+$result = $stmt->get_result();
+$student =null;
+if($result && $result-> num_rows > 0){
+    $student =$result->fetch_assoc();
+}
+else{
+    $msg= "No Record Found";
+}
+
+$stmt ->close();
+$conn ->close();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +46,7 @@
         <div class="container">
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <div class="icon">
-                <a href="enrolement.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                <a href="enrolement.php"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
                 <!-- Hidden checkbox for state toggling -->      
                         <!-- Hamburger icon label -->
                         <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
@@ -23,82 +55,83 @@
             </div>
             <div class="menu">
                 <ul class="menu_links">
-                    <li id="courses"><a href="enrolement.html">Enrolments</a></li> 
-                    <li><a href="student_details.html">Student Detalis</a></li>
-                    <li><a href="marks_results.html">Results</a></li>
-                    <li><a href="help-support.html">Help and Support</a></li>
+                    <li id="courses"><a href="enrolement.php">Enrolments</a></li> 
+                    <li><a href="student_details.php">Student Detalis</a></li>
+                    <li><a href="marks_results.php">Results</a></li>
+                    <li><a href="help-support.php">Help and Support</a></li>
                 </ul> 
             </div>
-            <div class="search">
-                    <input type="text" placeholder="search...">
-            </div>
+            <div class="log-out">
+                        <form action="logout.php">
+                        <input class= "log-out"type="submit" value="Log Out" >
+                    </form>
+                    </div>
         </div>
     </header>
 <!--student details container-->
     <div class="details_container">
             <div class="column_25">
                 <img src="images/profile.png" alt="User Profile Picture here">
-                <h3>Student Name</h3>
+                 <h3><?php echo htmlspecialchars($student['firstname'] ?? 'Student'); ?>
+                <?php echo htmlspecialchars($student['lastname'] ?? 'Student'); ?>
+                </h3> 
+                
             </div>
             <div class="column_75">
-                <table class="student_table">
-                    <tr>
+                <?php if ($student): ?>
+               <table class="student_table">
+                     <tr>
                         <td >Student ID</td>
-                        <td>s12345</td>
+                       <td><?php echo htmlspecialchars($student['student_id']); ?></td>
+                       
                     </tr>
                     <tr>
                         <td>First Name</td>
-                        <td>Hellen</td>
+                         <td><?php echo htmlspecialchars($student['firstname']); ?></td>   
                     </tr>
                     <tr>
                         <td>Last Name</td>
-                        <td>Kanaga</td>
+                         <td><?php echo htmlspecialchars($student['lastname']); ?></td>
                     </tr>
-
                     <tr>
                         <td>Email</td>
-                        <td>s12345@gmial.com</td>
+                         <td><?php echo htmlspecialchars($student['email']); ?></td>    
                     </tr>
-
                     <tr>
                         <td>Gender</td>
-                        <td>Female</td>
+                         <td><?php echo htmlspecialchars($student['gender']); ?></td>     
                     </tr>
-
                     <tr>
-                        <td>Date of Birth</td>
-                        <td>12-20-2000</td>
+                        <td>Date of Birth</td>"
+                        <td><?php echo htmlspecialchars($student['date_birth']); ?></td>    
                     </tr>
 
                     <tr>
                         <td>Address</td>
-                        <td>23 Raymond St, Dandenong</td>
+                         <td><?php echo htmlspecialchars($student['address']); ?></td>     
                     </tr>
-
                     <tr>
                         <td>Course</td>
-                        <td>IT</td>
+                         <td><?php echo htmlspecialchars($student['course']); ?></td>
                     </tr>
-
                     <tr>
                         <td>Semester</td>
-                        <td>2</td>
+                        <td><?php echo htmlspecialchars($student['semester']); ?></td>
                     </tr>
-
                     <tr>
                         <td>Phone Number</td>
-                        <td>s12345</td>
+                         <td><?php echo htmlspecialchars($student['phone_number']); ?></td>     
                     </tr>
                     <tr>
                         <td>Study Location</td>
-                        <td>Berwick</td>
+                         <td><?php echo htmlspecialchars($student['studey_location']); ?></td>
                     </tr>
-
                     <tr>
                         <td>Student email</td>
-                        <td>s12345hellen@mychisholm.edu.au</td>
+                         <td><?php echo htmlspecialchars($student['student_email']); ?></td>      
                     </tr>
                 </table>
+                <?php endif;?>
             </div>
     </div>
 

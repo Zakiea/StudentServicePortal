@@ -81,12 +81,20 @@ div .menu ul li a:hover{
 .menu a:active{
     background-color:#ffe4c4 ;
 }
-.search{
+.search, .log-out{
 margin-left: auto;
-margin-right: 5px;
+margin-right: 1.2rem;
 
 }
-
+.log-out input{
+    padding: 0.7rem;
+    margin-top: -0.45rem;
+    border-radius: 1rem;
+}
+.log-out input:hover{
+    background-color: #cf632d;
+    border-color: #cf632d;
+}
 .container .search input[type=text]{
     
     padding: 10px;
@@ -214,6 +222,8 @@ a{
 }
 /*-------------------------------------------------*/
 /*Marks and Result page styles */
+
+
 .current_subj,.previous_subj{
     display: flex;
     justify-content: center;
@@ -230,6 +240,9 @@ h3{
 }
 .unit_table td,tr,th{
     padding:15px
+}
+td{
+    padding: 20px;
 }
 .unit_table tr:hover{
     background-color: #ffe4c4;
@@ -256,6 +269,15 @@ td:first-child:hover{
 }
 
 .row input[type=text], .row select, .row textarea{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    
+}
+.row input[type=password], .row select, .row textarea{
     width: 100%;
     padding: 20px;
     border: 1px solid #ccc;
@@ -597,4 +619,15 @@ td:first-child:hover{
 .student_table tr td{
     padding: 10px;
     border: none;
+}
+
+/*Login Page Design*/
+.login-logo {
+   display: flex;
+   align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    height: 5rem;
+    
 }

@@ -6,8 +6,11 @@
     }
      .banner_content{
         position: absolute;
-        top: 28%;
+        top: 55%;
         left: 50%;
+    }
+    h1{
+        margin-top: 0;
     }
     .banner{
         height: 50%;

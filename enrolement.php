@@ -1,3 +1,41 @@
+<?php
+session_start();
+require_once('settings.php');
+$conn = mysqli_connect($host, $user, $pswd, $dbnm);
+
+if (!$conn) {
+    die('Database connection failed: ' . mysqli_connect_error());
+}
+
+$curr_student_id= $_SESSION['student_id'];
+
+// SQL Query using INNER JOINs to fetch data from all 3 tables
+$sql = "SELECT 
+            e.enrol_id, 
+            s.id AS student_internal_id, 
+            s.student_id, 
+            s.firstname, 
+            u.u_code, 
+            u.u_name 
+        FROM enrolments e
+        JOIN student_details s ON e.id = s.id
+        JOIN units u ON e.unit_id = u.unit_id
+        WHERE student_id=?
+        ";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s",$curr_student_id);
+$stmt-> execute();
+$result = $stmt->get_result();
+
+$enrols = [];
+while($row =$result->fetch_assoc()){
+    $enrols[]= $row;
+}
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +52,7 @@
             <div class="container">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <div class="icon">
-                    <a href="index.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                    <a href="index.php"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
                         <!-- Hidden checkbox for state toggling -->      
                             <!-- Hamburger icon label -->
                             <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
@@ -24,14 +62,19 @@
                 <div class="menu">
                     <ul class="menu_links">
                         <li id="courses">
-                            <a href="enrolement.html">Enrolments</a>
+                            <a href="enrolement.php">Enrolments</a>
                         </li> 
-                        <li><a href="student_details.html">Student Detalis</a></li>
-                        <li><a href="marks_results.html">Results</a></li>
-                        <li><a href="help-support.html">Help and Support</a></li>
+                        <li><a href="student_details.php">Student Detalis</a></li>
+                        <li><a href="marks_results.php">Results</a></li>
+                        <li><a href="help-support.php">Help and Support</a></li>
                     </ul> 
                 </div>
-                     <!--<div class="profile_dropdwn">
+                     <div class="log-out">
+                        <form action="logout.php">
+                        <input class= "log-out" type="submit" value="Log Out" >
+                    </form>
+                    </div>
+            </div><!--<div class="profile_dropdwn">
                         <select name="profil_dropdown" id="profile_dropdwn">
                             <option value="profile"><a href="student_details.html">Profile</a></option>
                             <option value="gredes_overview"><a href="marks_results.html">Grades Overview</a></option>
@@ -46,7 +89,7 @@
         <div class="marks_container">
             <div class="top_bar">
                 <h1>Dashboard </h1>
-                <h2> Hi, User &#128075</h2>
+                <h2> Hi, <?php echo htmlspecialchars($_SESSION['firstname']); ?></h2>
             </div>
             <div class="starred_course">
                 <h4>Starred Courses</h4>
@@ -140,9 +183,15 @@
                         </div>
                         <div class="card_row">
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png." alt="image"></a> 
+                           <?php if(isset($enrols[0])):?>
+                            
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                                <li><a href="#"><?php echo htmlspecialchars($enrols[0]['u_code'].'-' . $enrols[0]['u_name'] );?></a></li>
+
+                                <?php  endif;?>
                             </ul>
+                            
+                        
                             <button id="toggle_btn" onclick="togglefunction5()">
                                 <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
                             </button>
@@ -152,9 +201,12 @@
                             </div>
                         </div>
                         <div class="card_row">
+                             <?php if(isset($enrols[1])):?>
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                                <li><a href="#"><?php echo htmlspecialchars($enrols[1]['u_code'].'-' . $enrols[1]['u_name'] );?></a></li>
+
+                                <?php  endif;?>
                             </ul>
                             <button id="toggle_btn" onclick="togglefunction6()">
                                 <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
@@ -167,9 +219,10 @@
                     </div>
                      <div class="card_col">
                         <div class="card_row">
+                            
                             <a href="#"><img id="enrlmnt_img" src="images/mychisholm.png" alt="mychisholm"></a> 
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                               <li><a href="#">Getting Started </a></li>
                             </ul>
                             <button id="toggle_btn" onclick="togglefunction7()">
                                 <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
@@ -181,9 +234,12 @@
                         </div>
                         
                         <div class="card_row">
+                            <?php if(isset($enrols[2])): ?>
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                                <li><a href="#"><?php echo htmlspecialchars($enrols[2]['u_code'].'-' . $enrols[2]['u_name'] );?></a></li>
+
+                                <?php  endif;?>
                             </ul>
                             <button id="toggle_btn" onclick="togglefunction8()">
                                 <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
@@ -193,15 +249,19 @@
                                     <a class="toggle_item">Remove this course</a>
                             </div>
                         </div>
+                        
                         <div class="card_row">
+                            <?php if(isset($enrols[3])): ?>
                             <a href="#"><img id="enrlmnt_img" src="images/Dashboard Image.png" alt="image"></a> 
                             <ul>
-                                <li><a href="#">Getting Started with my Chisholm</a></li>
+                                <li><a href="#"><?php echo htmlspecialchars($enrols[3]['u_code'].'-' . $enrols[3]['u_name'] );?></a></li>
+
+                                <?php  endif;?>
                             </ul>
                             <button id="toggle_btn" onclick="togglefunction9()">
                                 <img id="toggle_image" src="images/icons8-menu-vertical-24.png" alt="">
                             </button>
-                            <div id="toggle_content9" class="toggle_content">
+                            <div id="toggle_content8" class="toggle_content">
                                     <a class="toggle_item">Star this course</a>
                                     <a class="toggle_item">Remove this course</a>
                             </div>

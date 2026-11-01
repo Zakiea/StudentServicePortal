@@ -23,20 +23,21 @@
         </div>
         <div class="menu">
             <ul class="menu_links">     
-                <li id="courses">
-                    <!--the links are copied from chisholm website to connect so that students have access to main chisholm website-->
-                    <a href="#">Courses</a> 
-                </li> 
-                <li><a href="#">Students</a></li>
-                <li><a href="#">Industry</a></li>
-                <li><a href="#">Study Online</a></li>
-                <li><a href="#">About Us</a></li> 
+                 <li id="courses">
+                            <a href="login.php">Enrolments</a>
+                        </li> 
+                        <li><a href="login.php">Student Detalis</a></li>
+                        <li><a href="login.php">Results</a></li>
+                        <li><a href="login.php">Help and Support</a></li>
+                        <li><a href="staff/staff_login.php">Management</a></li>
                  
             </ul> 
         </div>
-        <!--<div class="search">
-                <input type="text" placeholder="search...">
-         </div>-->
+         <div class="log-out">
+            <form action="login.php">
+                <input class= "log-out"type="submit" value="Login" >
+            </form>
+            </div>
     </div>
 </header>
 <!--Banner-->
@@ -52,22 +53,22 @@
 <!--Body Content-->
 <section  class="content medium-4 columns" >
     <aside class="tow-columns layout-container" role="complementary" >    
-        <a href="student_details.html">
+        <a href="login.php">
                 <div class="content-items"><span>Student Details</span>
                     <p class="content-meta">Find Out more about your details here</p>
                 </div>
             </a>
-            <a href="enrolement.html">
+            <a href="login.php">
                 <div class="content-items"><span>Enrolments</span>
                     <p class="content-meta">Your Enrolement Status including current, previous Enrolements</p>
                 </div>
             </a>    
-            <a href="marks_results.html">
+            <a href="login.php">
                 <div class="content-items"><span>Marks and Result</span>
                     <p class="content-meta">Find Out when and how to access your results, and understand your grades</p>
                 </div>
             </a>    
-            <a href="help-support.html">
+            <a href="login.php">
                 <div class="content-items"><span>Help and Support</span>
                     <p class="content-meta">How Can We Help you</p>
                 </div>

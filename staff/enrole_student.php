@@ -1,14 +1,16 @@
+
+
 <!DOCTYPE html>
 <html lang="eng">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        
-        <title>Help and Support</title>
+        <title>Enrole Students</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="css/tablet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="js/javascript.js"></script>
+        
        
     </head>
 <body>
@@ -16,7 +18,7 @@
          <div class="container">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <div class="icon">
-                    <a href="enrolement.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
+                    <a href="manage_enrolment.html"><i id="home_icon"  class="fa fa-home outline" ></i></a>        
                         <!-- Hidden checkbox for state toggling -->      
                             <!-- Hamburger icon label -->
                             <label for="menu-toggle" class="hamburger" aria-label="Toggle Navigation">
@@ -25,28 +27,28 @@
                 </div>
             <div class="menu">
                 <ul class="menu_links">
-                    <li id="courses">
-                            <a href="enrolement.html">Enrolments</a>
-                        </li> 
-                        <li><a href="student_details.html">Student Detalis</a></li>
-                        <li><a href="marks_results.html">Results</a></li>
-                        <li><a href="help-support.html">Help and Support</a></li>
+                   <li><a href="managment.php">Management</a></li>
+                <li><a href="enrole_student.php">Enrole Students</a></li>
+                <li><a href="manage_marks.php">Mange Marks</a></li>
+                <li><a href="manage_support.php">Manage Support</a></li> 
                                  
                 </ul>   
             </div>
-            <div class="search">
-                <input type="text" placeholder="search...">
-            </div>
+          <div class="log-out">
+            <form action="logout.php">
+            <input class= "log-out"type="submit" value="Log Out" >
+        </form>
+        </div>
         </div>
     </header>
         <!--Help $ support form-->
      <body>
         
-       <div class="form-container" onsubmit="return validate_form()" id="form" name="forms">
+       <div class="form-container"  id="form" name="forms">
         <div class="row">
-             <h2>Share With Us</h2></div>
+             <h2>Enrole Student</h2></div>
         
-        <form action="/submit" id="forms">
+        <form action=""  id="forms" method="POST">
             <div class="row">
                 <div class="col-25">
                     <label for="fname">First Name</label>
@@ -70,7 +72,7 @@
                     <label for="email">Email</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" name="lastname" id="email" placeholder="Your Student Email" onmouseover="eshow()" onmouseout="ehide()">
+                    <input type="text" name="email" id="email" placeholder="Your Student Email" onmouseover="eshow()" onmouseout="ehide()">
                     <p id="email_span"></p>
                 </div>
             </div>
@@ -88,9 +90,9 @@
                     <label for="">Study Method</label>
                 </div>
                 <div class="col-75">
-                    <input type="checkbox" class="options" id="study_chkbx" value="online">
+                    <input type="checkbox" name="checkbox" class="options" id="study_chkbx" value="online">
                     <label for="study_chkbx">onlie</label>
-                    <input type="checkbox" class="options" id="study_chkbx" value="on-campus">
+                    <input type="checkbox" name="checkbox" class="options" id="study_chkbx" value="on-campus">
                     <label for="study_chkbx">On-Campus</label>
                 </div>
             </div>
@@ -130,7 +132,7 @@
                 
             </div>
             <div class="row">
-                <input type="button" name="submit" id="submit_btn" value="Submit" onclick="validate_form()">
+                <input type="submit" name="submit" id="submit_btn" value="Submit">
             </div>
         </form>
        </div>

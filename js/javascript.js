@@ -90,9 +90,7 @@ function validate_form(){
             alert("Please enter a valid text!(No scripts or html tags) ");
             return false;
         }
-        else(
-            alert("Submitted Successfully!")
-        )
+        
 }
 
  
